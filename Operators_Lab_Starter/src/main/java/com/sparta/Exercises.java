@@ -22,13 +22,12 @@ public class Exercises {
 	
 	 // correct this method - it should multiply x by y and return the result plus one
     public static int anotherMethod(int x, int y) {
-        x *= x * y;
-        return x++;
+       return (x*y)+1;
     }
 	
 	    // correct this method so that it passes its tests
     public static String stringMethod(String theString) {
-        if (theString != null & theString.toUpperCase().startsWith("H")) {
+        if (theString != null && theString.toUpperCase().startsWith("H")) {
             return "Starts with H";
         }
         return "Doesn't start with H";

@@ -57,4 +57,21 @@ public class Exercises_Tests {
         var result = Exercises.stringMethod(null);
         Assertions.assertEquals("Doesn't start with H", result);
     }
+
+    @Test
+    @DisplayName("unit tests in the Exercises_Tests class ")
+    public void myMethodTest1(){
+       boolean  result = Exercises.myMethod(10,5);
+       Assertions.assertEquals(true, result);
+    }
+@Test
+    public void myMethodTest2(){
+        boolean  result = Exercises.myMethod(44,44);
+        Assertions.assertEquals(false, result);
+    }
+    @Test
+    public void myMethodTest3(){
+        boolean  result = Exercises.myMethod(6,5);
+        Assertions.assertEquals(false, result);
+    }
 }
