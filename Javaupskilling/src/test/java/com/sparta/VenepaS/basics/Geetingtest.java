@@ -1,10 +1,9 @@
-package Sparta;
+package com.sparta.VenepaS.basics;
 
-import com.sparta.VenepaS.Main;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Timeout;
 
 public class Geetingtest {
     @Test
@@ -31,6 +30,17 @@ public class Geetingtest {
         String expected = "Good morning!";
         String actual = Main.greeting(time);
         Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    @DisplayName("Greeting yo retrun Goodmorning with input 11")
+    public void greetingThrowExceptionTest(){
+        int time = -1;
+        //String expected = "Good morning!";
+        //String actual = Main.greeting(time);
+        var exception = Assertions.assertThrows(IllegalArgumentException.class, () -> Main.greeting(time));
+        Assertions.assertTrue("Must be " , exception.getMessage());
+       // Assertions.assertEquals(expected, actual);
     }
 
 
